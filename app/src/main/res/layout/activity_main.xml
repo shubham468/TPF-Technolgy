@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightblue"
+        android:elevation="4dp"
+        app:title="News Headlines"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@android:color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:paddingBottom="50dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bitcoin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center|start"
+                    android:minLines="3"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:padding="5dp"
+                    android:text="All articles about Bitcoin from the last month, sorted by recent first"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/us_business"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center|start"
+                    android:minLines="3"
+                    android:padding="5dp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:text="Top business headlines in the US right now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/apple_market"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center|start"
+                    android:minLines="3"
+                    android:padding="5dp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:text=" All articles mentioning Apple from yesterday, sorted by popular publishers first"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/techcrunch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center|start"
+                    android:minLines="3"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:padding="5dp"
+                    android:text="Top headlines from TechCrunch right now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/wallstreet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center|start"
+                    android:minLines="3"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:padding="5dp"
+                    android:text="All articles published by the Wall Street Journal in the last 6 months, sorted by recent first"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
